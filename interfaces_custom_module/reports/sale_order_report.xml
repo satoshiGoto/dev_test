@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_saleorder_customization" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@class='clearfix']" position="after">
+            <br/>
+            <t t-if="doc.sale_limit">
+                <div style="font-size: 20px;">
+                    <strong>
+                        <p>Se ha alcanzado el <t t-esc="doc._sale_limit_porcentage()"/>% del
+                            límite de venta
+                        </p>
+                    </strong>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>
