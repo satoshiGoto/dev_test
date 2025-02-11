@@ -11,6 +11,9 @@
             <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="before">
                 <field name="bar_code"/>
             </xpath>
+             <xpath expr="//field[@name='order_line']/tree/field[@name='price_subtotal']" position="after">
+                <field name="reference"/>
+            </xpath>
 
         </field>
     </record>
